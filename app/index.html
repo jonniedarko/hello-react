@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>React: Hello World</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <!--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react-with-addons.js"></script>
+    -->
+</head>
+<body>
+<div id="mount-point"></div>
+<script type="text/jsx">
+    /** @jsx React.DOM */
+    var MyComponent = React.createClass({
+        render: function(){
+            return (<div>
+                    <h1>Hello {this.props.name}</h1>
+                <p>This is MyComponent</p>
+            </div>
+            );
+        }
+    });
+
+    React.render(
+            <MyComponent name="john"/>,
+            document.getElementById('mount-point')
+    );
+</script>
+</body>
+</html>
